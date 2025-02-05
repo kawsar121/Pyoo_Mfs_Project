@@ -3,16 +3,25 @@ document.getElementById("mainMoneyAdd").addEventListener('click', function(event
     
     //Step : 2 input money added
     const inputAmount = document.getElementById('inputAmountAdd');
-    const inputAmountValue = inputAmount.value;
-    // AVilabe balance
+    const inputAmountValue = parseFloat(inputAmount.value);
+    
+   
+    //Step:3 Get AVilabe balance
     const avilabebalace = document.getElementById('abiableBalance').innerText;
+    const avilabebalaceConvert = parseFloat(avilabebalace)
+    // console.log(convert)
     // console.log(avilabebalace)
 
+    // Step:4 Input pin Addeded
     const inputPin = document.getElementById("inputPin");
     const inputPinValue = inputPin.value;
+
+
+    // Step:5 Pin Verify
     if(inputPinValue === '6721'){
-        const add = avilabebalace.innerText = avilabebalace + inputAmountValue ;
-        console.log(add)
+        const newBalance= avilabebalaceConvert + inputAmountValue ;
+        document.getElementById("abiableBalance").innerText = newBalance
+        
     }
     else{
         alert("something Wrong")
