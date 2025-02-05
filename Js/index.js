@@ -14,6 +14,7 @@ document.getElementById('btn-login').addEventListener('click',function(event){
     // Step:4 Phone and pin validation Cheek (this is not actual right way)
     if(phoneValue === '5' && pinValue === '6721'){
         console.log("you are logedin")
+        window.location.href = '/Home/home.html'
     }
     else{
         alert("wrong pin or phone")
